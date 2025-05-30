@@ -16,8 +16,7 @@ private String addressLine2;
 private Integer city_id;
 private Integer state_id;
 private Integer country_id;
-@ManyToOne
-private User user;
+
 public Long getId() {
 	return id;
 }
@@ -54,11 +53,6 @@ public Integer getCountry_id() {
 public void setCountry_id(Integer country_id) {
 	this.country_id = country_id;
 }
-public User getUser() {
-	return user;
-}
-public void setUser(User user) {
-	this.user = user;
-}
+
 
 }
