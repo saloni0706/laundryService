@@ -9,130 +9,143 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 
 @Entity
 public class VendorBusiness {
-	 @Id
-	    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-	    private String businessName;
-	    
-	    private String description;
+	private String businessName;
 
-	    private String addressLine1;
-	    private String addressLine2;
-	    private Integer city_id;
-	    private Integer state_id;
-	    private Integer country_id;
+	private String description;
+	
 
-	   
+	private Integer userId;
 
-	    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-	    @JoinColumn(name = "vendor_id")
-	    private List<VendorService> vendorService = new ArrayList<>();
-	   
-	    // creates user_id FK in address table
-	    private String contactNumber;
-	    private String email;  
-	    
-	    public Long getId() {
-			return id;
-		}
+	public Integer getUserId() {
+		return userId;
+	}
 
-		public void setId(Long id) {
-			this.id = id;
-		}
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
 
-		public String getBusinessName() {
-			return businessName;
-		}
+	private String addressLine1;
+	private String addressLine2;
+	private Integer city_id;
+	private Integer state_id;
+	private Integer country_id;
 
-		public void setBusinessName(String businessName) {
-			this.businessName = businessName;
-		}
 
-		public String getDescription() {
-			return description;
-		}
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+	@JoinColumn(name = "vendor_id")
+	private List<VendorService> vendorServices = new ArrayList<>();
 
-		public void setDescription(String description) {
-			this.description = description;
-		}
+	
+	private String contactNumber;
+	private String email;  
 
-		public String getAddressLine1() {
-			return addressLine1;
-		}
+	public Long getId() {
+		return id;
+	}
 
-		public void setAddressLine1(String addressLine1) {
-			this.addressLine1 = addressLine1;
-		}
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-		public String getAddressLine2() {
-			return addressLine2;
-		}
+	public String getBusinessName() {
+		return businessName;
+	}
 
-		public void setAddressLine2(String addressLine2) {
-			this.addressLine2 = addressLine2;
-		}
+	public void setBusinessName(String businessName) {
+		this.businessName = businessName;
+	}
 
-		public Integer getCity_id() {
-			return city_id;
-		}
+	public String getDescription() {
+		return description;
+	}
 
-		public void setCity_id(Integer city_id) {
-			this.city_id = city_id;
-		}
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
-		public Integer getState_id() {
-			return state_id;
-		}
+	public String getAddressLine1() {
+		return addressLine1;
+	}
 
-		public void setState_id(Integer state_id) {
-			this.state_id = state_id;
-		}
+	public void setAddressLine1(String addressLine1) {
+		this.addressLine1 = addressLine1;
+	}
 
-		public Integer getCountry_id() {
-			return country_id;
-		}
+	public String getAddressLine2() {
+		return addressLine2;
+	}
 
-		public void setCountry_id(Integer country_id) {
-			this.country_id = country_id;
-		}
+	public void setAddressLine2(String addressLine2) {
+		this.addressLine2 = addressLine2;
+	}
 
-		public List<VendorService> getVendorService() {
-			return vendorService;
-		}
+	public Integer getCity_id() {
+		return city_id;
+	}
 
-		public void setVendorService(List<VendorService> vendorService) {
-			this.vendorService = vendorService;
-		}
+	public void setCity_id(Integer city_id) {
+		this.city_id = city_id;
+	}
 
-		public String getContactNumber() {
-			return contactNumber;
-		}
+	public Integer getState_id() {
+		return state_id;
+	}
 
-		public void setContactNumber(String contactNumber) {
-			this.contactNumber = contactNumber;
-		}
+	public void setState_id(Integer state_id) {
+		this.state_id = state_id;
+	}
 
-		public String getEmail() {
-			return email;
-		}
+	public Integer getCountry_id() {
+		return country_id;
+	}
 
-		public void setEmail(String email) {
-			this.email = email;
-		}
+	public void setCountry_id(Integer country_id) {
+		this.country_id = country_id;
+	}
 
-		public String getWorkingHours() {
-			return workingHours;
-		}
 
-		public void setWorkingHours(String workingHours) {
-			this.workingHours = workingHours;
-		}
 
-		private String workingHours;
-	   
+	public List<VendorService> getVendorServices() {
+		return vendorServices;
+	}
+
+	public void setVendorServices(List<VendorService> vendorServices) {
+		this.vendorServices = vendorServices;
+	}
+
+	public String getContactNumber() {
+		return contactNumber;
+	}
+
+	public void setContactNumber(String contactNumber) {
+		this.contactNumber = contactNumber;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getWorkingHours() {
+		return workingHours;
+	}
+
+	public void setWorkingHours(String workingHours) {
+		this.workingHours = workingHours;
+	}
+
+	private String workingHours;
+
 }
