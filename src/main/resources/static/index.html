@@ -1,0 +1,695 @@
+
+
+<html lang="en">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">LaundryWeb - Home</title>
+<!-- Bootstrap CSS (Already Included) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- AdminLTE CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
+<!-- AdminLTE JS -->
+<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+
+<!-- Google Font: Source Sans Pro -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+<!-- jQuery
+<script src="../resources/dist/js/jquery-3.6.4.min.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- DataTables CSS -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+<!-- DataTables Responsive CSS -->
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.bootstrap5.min.css">
+<!-- DataTables JS -->
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+<!-- DataTables Responsive JS -->
+<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.5.0/js/responsive.bootstrap5.min.js"></script>
+
+<style>
+.image-container {
+	position: relative;
+	width: 100%;
+}
+
+.hero-image {
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+	filter: brightness(90%);
+}
+
+.hero-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 15px 25px;
+	border-radius: 10px;
+	width: 30%
+}
+
+.content-wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.main-content {
+	flex: 1;
+}
+
+.footer {
+	background-color: #f8f9fa;
+	padding: 15px;
+	text-align: center;
+}
+
+.navbar-custom {
+	background-color: #1c2434 !important; /* Custom Dark Blue */
+}
+
+.navbar-custom .nav-link {
+	color: white !important; /* Make text white */
+}
+
+.navbar-custom .nav-link:hover {
+	color: #f8f9fa !important; /* Lighter shade on hover */
+}
+
+.active-nav {
+	background-color: #007bff;
+	color: white !important;
+	border-radius: 8px;
+	padding: 5px 15px;
+}
+
+.centered-card {
+	max-width: 500px;
+	margin: 10vh auto;
+	position: relative;
+}
+
+.backButton {
+	background: none;
+	border: none;
+	color: #007bff;
+	font-size: 16px;
+	cursor: pointer;
+	font-weight: bold;
+	padding: 5px 10px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	z-index: 10;
+}
+
+#signUpCard {
+	display: none;
+}
+
+.setNextButton {
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+#emailDisplay {
+	color: white;
+	border: 2px solid white;
+	padding: 6px 12px;
+	border-radius: 20px;
+	display: inline-block;
+}
+
+#loginCard {
+	display: none;
+}
+
+#footer {
+	display: flex; /* Use flex to align items in a row */
+	align-items: center; /* Align items vertically */
+	background-color: black;
+	padding: 10px 90px;
+	font-size: 60px;
+	height: 100px;
+	width: 100%;
+	font-family: "Dancing Script", cursive;
+	color: white;
+	font-style: normal;
+}
+
+.vertical-text {
+	display: flex;
+	flex-direction: column; /* Stack text vertically */
+	font-size: 13px;
+	font-family: Arial, sans-serif;
+	margin-left: 20px; /* Space between TCS and vertical text */
+	color: white;
+}
+
+.vertical-text1 {
+	display: flex;
+	flex-direction: column; /* Stack text vertically */
+	font-size: 12px;
+	font-family: Arial, sans-serif;
+	padding-left: 30px; /* Space between TCS and vertical text */
+	color: white;
+	word-spacing: 7px;
+}
+</style>
+</head>
+<body class="hold-transition layout-top-nav">
+
+	<div class="content-wrapper">
+		<!-- Navbar -->
+		<nav
+			class="navbar navbar-expand-lg navbar-light navbar-custom shadow-sm">
+			<div class="container">
+				<a class="navbar-brand fw-bold text-white" href="#">Laundry Web</a>
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarNav">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-end"
+					id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+						<li class="nav-item"><a class="nav-link" href="#contact">Contact
+								Us</a></li>
+						<li class="nav-item"><a class="nav-link" href="#"
+							onclick="showSignUpCard()">Sign Up</a></li>
+						<li class="nav-item"><a class="nav-link" href="#"
+							onclick="showLoginCard()">Sign In</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<div class="image-container">
+			<img
+				src="https://images.unsplash.com/photo-1635274605638-d44babc08a4f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fA%3D%3D"
+				alt="Laundry Image" class="hero-image">
+			<div class="hero-text">
+				<div id="firstPopCard">
+					<h1 class="fw-bold">Welcome to Laundry Web</h1>
+					<p>Quick, Reliable & Affordable Laundry Services</p>
+					<a href="#" onclick="showSignUpCard()" class="btn btn-light btn-lg">Get
+						Started</a>
+				</div>
+
+				<div id="signUpCard">
+					<!-- Create Account Card -->
+					<div class="p-3" id="createAccountCard">
+						<p style="margin-top: 10px;">
+							<img
+								src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8u8BZcgcIxcfgSJsas_HDf2pfYTBlmo2q3g&s"
+								width="25px" height="25px"> Laundry Web
+						</p>
+						<h4 class="fw-bold" style="margin-top: 10px;">Create Account</h4>
+						<input type="text" id="email_signup" class="form-control my-3"
+							placeholder="someone@example.com">
+						<button class="btn btn-primary w-50 setNextButton"
+							onclick="showNextSignUpCard('passwordCardSignUp')">Next</button>
+						<br> <br>
+						<p style="align-items: center; margin-top: 10px;">
+							Already have an account? <a href="#" onclick="showLoginCard()">Sign
+								in</a>
+						</p>
+					</div>
+
+					<!-- Password Card -->
+					<div class="p-3 d-none" id="passwordCardSignUp">
+						<div style="align-items: left; margin-bottom: 10px;">
+							<button class="btn btn-outline-secondary btn-sm backButton"
+								onclick="goBackSignUpCard()">&#8592; Back</button>
+							<p>
+								<img
+									src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8u8BZcgcIxcfgSJsas_HDf2pfYTBlmo2q3g&s"
+									width="25px" height="25px"> Laundry Web
+							</p>
+						</div>
+						<span class="emailDisplaySignUp"
+							style="color: white; margin-left: 10px;">someone@laundryweb.com</span>
+						<h4 class="fw-bold" style="margin-top: 10px;">Create a
+							password</h4>
+						<input type="password" id="password_signup"
+							class="form-control my-3" placeholder="Create a password">
+						<button class="btn btn-primary w-50 setNextButton"
+							onclick="showNextSignUpCard('fullNameCard')">Next</button>
+					</div>
+
+					<!-- Full Name Card -->
+					<div class="p-3 d-none" id="fullNameCard">
+						<div style="align-items: left; margin-bottom: 10px;">
+							<button class="btn btn-outline-secondary btn-sm backButton"
+								onclick="goBackSignUpCard()">&#8592; Back</button>
+							<p>
+								<img
+									src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8u8BZcgcIxcfgSJsas_HDf2pfYTBlmo2q3g&s"
+									width="25px" height="25px"> Laundry Web
+							</p>
+						</div>
+						<span class="emailDisplaySignUp"
+							style="color: white; margin-left: 10px;">someone@laundryweb.com</span>
+						<h4 class="fw-bold" style="margin-top: 10px;">Enter Full Name</h4>
+						<input type="text" id="fullName_signup" class="form-control my-3"
+							placeholder="Enter full name">
+						<button class="btn btn-primary  w-50 setNextButton"
+							onclick="showNextSignUpCard('addressCard')">Next</button>
+					</div>
+
+					<!-- Address Card -->
+					<div class="p-3 d-none" id="addressCard">
+						<div style="align-items: left; margin-bottom: 10px;">
+							<button class="btn btn-outline-secondary btn-sm backButton"
+								onclick="goBackSignUpCard()">&#8592; Back</button>
+							<p>
+								<img
+									src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8u8BZcgcIxcfgSJsas_HDf2pfYTBlmo2q3g&s"
+									width="25px" height="25px"> Laundry Web
+							</p>
+						</div>
+						<span class="emailDisplaySignUp"
+							style="color: white; margin-left: 10px;">someone@laundryweb.com</span>
+						<h4 class="fw-bold" style="margin-top: 10px;">Enter Address
+							Details</h4>
+
+						<div class="mt-3">
+							<input type="text" id="addressLine1_signup"
+								class="form-control mb-2 rounded-pill"
+								placeholder="Address Line 1"> <input type="text"
+								id="addressLine2_signup" class="form-control mb-2 rounded-pill"
+								placeholder="Address Line 2"> 
+<input type="text" id="postal_code" class="form-control mb-2 rounded-pill" required oninput="debouncedHandlePostalCodeChange()" placeholder="Postal Code">
+ <input type="text" id="city"
+								class="form-control mb-2 rounded-pill" placeholder="Enter City">
+							<input type="text" id="state"
+								class="form-control mb-2 rounded-pill" placeholder="Enter State">
+							<input type="text" id="country"
+								class="form-control mb-2 rounded-pill"
+								placeholder="Enter Country"> <input type="text"
+								id="phoneNumber_signup" class="form-control mb-2 rounded-pill"
+								placeholder="Enter Phone No">
+						</div>
+
+						<button class="btn btn-primary w-50 setNextButton"
+							onclick="showNextSignUpCard('roleCard')">Next</button>
+					</div>
+
+					<!-- Role Selection Card -->
+					<div class="p-3 d-none" id="roleCard">
+						<div style="align-items: left; margin-bottom: 10px;">
+							<button class="btn btn-outline-secondary btn-sm backButton"
+								onclick="goBackSignUpCard()">&#8592; Back</button>
+							<p>
+								<img
+									src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8u8BZcgcIxcfgSJsas_HDf2pfYTBlmo2q3g&s"
+									width="25px" height="25px"> Laundry Web
+							</p>
+						</div>
+						<span class="emailDisplaySignUp"
+							style="color: white; margin-left: 10px;">someone@laundryweb.com</span>
+						<h4 class="fw-bold" style="margin-top: 10px;">Select Role</h4>
+
+						<select class="form-select my-3" id="role_signup">
+							<option value="" disabled selected>-- Select Role --</option>
+							<option value="Vendor">Vendor</option>
+							<option value="Customer">Customer</option>
+						</select>
+
+						<button class="btn btn-primary w-50 setNextButton"
+							onclick="registerAccSignUp()">Submit</button>
+					</div>
+				</div>
+				<div id="loginCard">
+					<!-- Account Login Card -->
+					<div class="p-3" id="accountLoginCard">
+						<p style="margin-top: 10px;">
+							<img
+								src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8u8BZcgcIxcfgSJsas_HDf2pfYTBlmo2q3g&s"
+								width="25px" height="25px"> Laundry Web
+						</p>
+						<h4 class="fw-bold" style="margin-top: 10px;">Sign in</h4>
+						<input type="text" id="email_login" class="form-control my-3"
+							placeholder="Enter your email or phone"> <small
+							id="email_loginError" class="text-danger d-none"></small>
+						<button class="btn btn-primary w-50 setNextButton"
+							onclick="showNextSignInCard('passwordCardSignIn')">Next</button>
+						<br> <br>
+						<p style="align-items: center; margin-top: 10px;">
+							No account? <a href="#" onclick="showSignUpCard()">Create
+								one!</a>
+						</p>
+					</div>
+
+					<!-- Password Card -->
+					<div class="p-3 d-none" id="passwordCardSignIn">
+						<div style="align-items: left; margin-bottom: 10px;">
+							<button class="btn btn-outline-secondary btn-sm backButton"
+								onclick="goBackSignInCard()">&#8592; Back</button>
+							<p>
+								<img
+									src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8u8BZcgcIxcfgSJsas_HDf2pfYTBlmo2q3g&s"
+									width="25px" height="25px"> Laundry Web
+							</p>
+						</div>
+						<span id="emailDisplaySignIn"
+							style="color: white; margin-left: 10px;">someone@laundryweb.com</span>
+						<h4 class="fw-bold" style="margin-top: 10px;">Sign in</h4>
+						<input type="password" id="password_login"
+							class="form-control my-3" placeholder="Enter your password">
+						<small id="loginPasswordError" class="text-danger d-none"></small>
+						<button class="btn btn-primary w-50 setNextButton"
+							onclick="accLogin()">Sign in</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer 
+		<footer class="footer mt-auto py-3">
+			<p>&copy; 2025 Laundry Web. All rights reserved.</p>
+		</footer>-->
+		<div id="footer">
+			<b style="font-size: 25px;">laundryWeb</b>
+			<div class="vertical-text">
+				<span>Laundry</span> <span>Web</span> <span>SERVICES</span>
+			</div>
+			<div class="vertical-text1">
+				<span>�2025 LaundryWeb Services Limited</span> <span>
+					Privacy NoticeCookie PolicyAccessibility
+					DeclarationDisclaimerSecurity PolicyCalifornia Notice at Collectio</span>
+				<span>Customize Cookies</span>
+			</div>
+		</div>
+
+
+
+		<script>
+//	document.addEventListener("DOMContentLoaded", function () {
+	$(document).ready(function(){
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", function () {
+                // Remove active class from all links
+                navLinks.forEach(nav => nav.classList.remove("active-nav"));
+
+                // Add active class to clicked link
+                this.classList.add("active-nav");
+            });
+        });
+    });
+	</script>
+
+	<script>
+	function showSignUpCard() {
+	    $('#signUpCard').css('display', 'block');
+	    $('#firstPopCard').css('display', 'none');
+	    $('#loginCard').css('display', 'none');
+	    
+	    document.title = "Create Account";
+	    
+	   // $('#signUpCard').show();
+	   // $('#firstPopCard').hide();
+	   // $('#loginCard').hide();
+	}
+
+        let signUpCurrentCard = "createAccountCard";
+        const signUpCards = ["createAccountCard", "passwordCardSignUp", "fullNameCard", "addressCard", "roleCard"];
+
+        function showNextSignUpCard(nextCard) {
+        	
+        	var emailInput = $('#email_signup').val();
+            var emailPhone = emailInput.trim();
+            
+            $('.emailDisplaySignUp').text(emailPhone);
+        
+            document.getElementById(signUpCurrentCard).classList.add("d-none");
+            document.getElementById(nextCard).classList.remove("d-none");
+            signUpCurrentCard = nextCard;
+            changePageTitle(signUpCurrentCard);
+        }
+
+        function goBackSignUpCard() {
+            let currentIndex = signUpCards.indexOf(signUpCurrentCard);
+            if (currentIndex > 0) {
+                document.getElementById(signUpCurrentCard).classList.add("d-none");
+                document.getElementById(signUpCards[currentIndex - 1]).classList.remove("d-none");
+                signUpCurrentCard = signUpCards[currentIndex - 1];
+                changePageTitle(signUpCurrentCard);
+            }
+        }
+
+        function registerAccSignUp() {
+        	//alert("Registering account...");
+        
+            const role = document.getElementById("role_signup").value || "";
+            //alert("Role: " + role);
+            const username = document.getElementById("fullName_signup").value || "";
+            //alert(username);
+            const email = document.getElementById("email_signup").value || "";
+            //alert(email);
+            const password = document.getElementById("password_signup").value || "";
+            //alert(password);
+            const addressLine1 = document.getElementById("addressLine1_signup").value || "";
+            //alert(addressLine1);
+            const addressLine2 = document.getElementById("addressLine2_signup").value || "";
+            //alert(addressLine2);
+            const postalCode = document.getElementById("postal_code").value || "";
+            //alert(postalCode);
+            const city = document.getElementById("city").value || "";
+            //alert(city);
+            const state = document.getElementById("state").value || "";
+            //alert(state);
+            const country = document.getElementById("country").value || "";
+            //alert(country);
+            const phoneNumber = document.getElementById("phoneNumber_signup").value || "";
+            //alert(phoneNumber);
+            const data = {
+                username: username,
+                email: email,
+                password: password,
+                role: role,
+                addresses: [
+                    {
+                        addressLine1: addressLine1,
+                        addressLine2: addressLine2,
+                        postalCode: postalCode,
+                        city: city,
+                        state: state,
+                        country: country,
+                        phoneNumber: phoneNumber
+                    }
+                ]
+            };
+//alert(data);
+            console.log("Sending:", data);
+
+            $.ajax({
+                type: "POST",
+                url: "/users", // Adjust this URL if necessary
+                contentType: "application/json",
+                data: JSON.stringify(data),
+                success: function(response) {
+                    alert("Registration Successful!");
+                    console.log(response);
+                },
+                error: function(xhr, status, error) {
+                    alert("Error while registering. Please try again.");
+                    console.error(xhr.responseText);
+                }
+            });
+        }
+
+
+
+    </script>
+
+	<script>
+    function showLoginCard() {
+    	
+	    $('#signUpCard').css('display', 'none');
+	    $('#firstPopCard').css('display', 'none');
+	    $('#loginCard').css('display', 'block');
+	    
+	    document.title = "Sign In";
+	    
+	   // $('#signUpCard').hide();
+	   // $('#firstPopCard').hide();
+	   // $('#loginCard').show();   	   	
+    }
+    
+    
+    let signInCurrentCard = "accountLoginCard";
+    const signInCards = ["accountLoginCard", "passwordCardSignIn"];
+
+    function showNextSignInCard(nextCard) {
+        var emailInput = $('#email_login').val();
+        var emailPhone = emailInput.trim();
+        
+        if (!emailPhone) {
+            document.getElementById('email_loginError').classList.remove("d-none");
+            $('#email_loginError').text("Please enter a valid email or phone.");
+            return;
+        }
+
+        
+
+                 
+                $('#emailDisplaySignIn').text(emailPhone);
+                document.getElementById(signInCurrentCard).classList.add("d-none");
+                document.getElementById(nextCard).classList.remove("d-none");
+                signInCurrentCard = nextCard;
+                changePageTitle(signInCurrentCard);
+            
+        
+    }
+
+    function goBackSignInCard() {
+        let currentIndex = signInCards.indexOf(signInCurrentCard);
+        if (currentIndex > 0) {
+            document.getElementById(signInCurrentCard).classList.add("d-none");
+            document.getElementById(signInCards[currentIndex - 1]).classList.remove("d-none");
+            signInCurrentCard = signInCards[currentIndex - 1];
+            changePageTitle(signInCurrentCard);
+        }
+    }
+
+    function accLogin() {
+        var emailInput = $('#email_login').val();
+        var passwordInput = $('#password_login').val();
+        
+        var emailPhone = emailInput.trim();
+        var password = passwordInput.trim();
+        
+        var dataString = "username=" + emailPhone + "&password=" + password;
+                
+    	$.ajax({
+    		type: "POST",
+    		data: dataString,
+    		url: "/api/login",
+    		data: JSON.stringify({
+    	        username: emailPhone,
+    	        password: password
+    	    }),
+    		contentType: "application/json",
+    		dataType: "json",
+    		success: function(result){
+  				console.log(result);
+  				
+  				 const roleId = result.roleId;
+  			    
+  			    if (roleId === 1) {
+  			        window.location.href = "admin_index";
+  			    } else if (roleId === 2) {
+  			        window.location.href = "vendor_registration";
+  			    } else if (roleId === 3) {
+  			        window.location.href = "client_index";
+  			    }
+    		},
+    		error: function() {
+    			document.getElementById('loginPasswordError').classList.remove("d-none")
+            	$('#loginPasswordError').text("Invalid password. Try again.");
+    		}
+    	});
+    }
+    
+    function checkAccIfExists(emailPhone, callback) {
+        $.ajax({
+            type: "POST",
+            data: { emailPhone: emailPhone },
+            url: "index_checkAccIfExists",
+            cache: false,
+            success: function(result) {
+                callback(result.trim() === "true");
+            },
+            error: function() {
+                console.log("Error");
+                callback(false);
+            }
+        });
+    }
+    </script>
+
+	<script>
+function changePageTitle(currentCard) {        	
+	var title = "";
+	
+	if(currentCard === "createAccountCard"){
+		title = "Create Account";
+	}else if(currentCard === "passwordCardSignUp"){
+		title = "Create a password";
+	}else if(currentCard === "fullNameCard"){
+		title = "Enter Full Name";
+	}else if(currentCard === "addressCard"){
+		title = "Enter Address Details";
+	}else if(currentCard === "roleCard"){
+		title = "Select Role";
+	}else if(currentCard === "accountLoginCard"){
+		title = "Sign in";
+	}else if(currentCard === "passwordCardSignIn"){
+		title = "Sign in";
+	}
+	
+	//$('#pageTitle').text(title);
+	document.title = title;
+}
+</script>
+
+    <script>
+    let debounceTimer;
+
+    function debouncedHandlePostalCodeChange() {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(handlePostalCodeChange, 500); // 500ms delay
+    }
+
+    function handlePostalCodeChange() {
+        const postalCode = document.getElementById('postal_code').value;
+
+        // Minimum length check (e.g., 6 digits)
+        if (postalCode.length < 6) {
+            return; // Do nothing until user finishes typing
+        }
+
+        $.ajax({
+        	 type: "GET",
+            url: "/getAddress",
+            data: { postalCode: postalCode },
+            success: function(response) {
+                if (response) {
+                    alert("Response received: " + JSON.stringify(response));
+
+                    document.getElementById("state").value = response.stateName || "";
+                    document.getElementById("city").value = response.cityName || "";
+                    document.getElementById("country").value = response.countryName || "";
+                } else {
+                    console.warn("No matching address found for postal code.");
+                }
+            }
+
+        });
+    }
+
+</script>
+
+
+</body>
+</html>

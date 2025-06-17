@@ -41,19 +41,13 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http
-            .csrf().disable()
-            .authorizeHttpRequests(auth -> auth
-                .requestMatchers(
-                    "/", 
-                    "/index.jsp", 
-                    
-                    "/users", 
-                    "/login" 
-                   
-                ).permitAll()
-                .anyRequest().authenticated()
-            )
+    	http
+    	  .csrf().disable()
+    	  .authorizeHttpRequests(auth -> auth
+    	    .requestMatchers("/", "/index", "/index.html","/getAddress","/users","/api/login","/vendor_index","/client_index","/vendor_registration").permitAll()
+    	    .anyRequest().authenticated()
+    	  )
+
             .sessionManagement(sess -> sess
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
             )

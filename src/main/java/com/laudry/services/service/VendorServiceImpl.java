@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.laudry.services.dto.AddressDetail;
 import com.laudry.services.dto.VendorInfoDTO;
 import com.laudry.services.model.VendorBusiness;
 
@@ -26,6 +27,11 @@ private VendorRepository vendorRepository;
 	public List<VendorInfoDTO> getVendorInfo() {
 		// TODO Auto-generated method stub
 		return vendorRepository.getVendorInfo();
+	}
+	@Override
+	public AddressDetail getAddress(int postalCode) {
+		// TODO Auto-generated method stub
+		return vendorRepository.getAddress(postalCode);
 	}
 	
 
